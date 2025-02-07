@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Outfit", serif;
+ 
+}
+
+.w-36 {
+  width: 100% !important;
+  height: 201px !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:w-32 {
+    width: 3rem !important;
+  }
+}
