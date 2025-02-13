@@ -9,14 +9,3 @@
   font-family: "Outfit", serif;
  
 }
-
-.w-36 {
-  width: 100% !important;
-  height: 201px !important;
-}
-
-@media (min-width: 640px) {
-  .sm\:w-32 {
-    width: 3rem !important;
-  }
-}

@@ -11,11 +11,21 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 const port = process.env.PORT || 4000;
 connectDB() 
-const allowedOrigins =  ['http://localhost:5173']
+// const allowedOrigins =  ['http://localhost:5174']
 // Middleware
 app.use(express.json());// all req wil be passed in json format
 app.use(cookieParser());
-app.use(cors({ origin: allowedOrigins , credentials: true }));// to send cookies in resposnes from express
+const allowedOrigins = ["http://localhost:5173"]
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
+};
+app.use(cors(corsOptions));
 
 // API Endpoints 
 app.get("/", (req, res) => {
