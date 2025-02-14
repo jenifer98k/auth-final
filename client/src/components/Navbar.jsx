@@ -42,8 +42,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full flex justify-between items-center p-4 sm:p-6 sm:px-24 absolute top-0 bg-gradient-to-r from-blue-200 via-pink-200 to-yellow-200 text-white ">
-      <img src={assets.logo} alt="logo" className="w-28 sm:w-32" />
+    <div className="w-full flex justify-between items-center p-4 sm:p-6 sm:px-24 absolute top-0  text-white ">
+
+<img
+  src={assets.logob}
+  alt="logo"
+  className="w-28 sm:w-32 rounded-lg"
+/>
+
       {userData ? (
         <div className="w-8 h-8 flex justify-center items-center rounded-full bg-black text-white relative group">
           {userData.name[0].toUpperCase()}
